@@ -4,3 +4,68 @@
     box-sizing: border-box;
 }
 
+header .container-fluid {
+    height: 50px;
+}
+
+.container-sidebar {
+    background-color: green;
+    height: calc(100vh - 50px);
+}
+
+.h{
+    height: calc(100vh - 50px);
+}
+
+.row {
+    height: 700px;
+}
+
+.row2 {
+    height: 150px;
+}
+
+.col-12 {
+    height: 100px;
+}
+
+.pleft {
+    padding-left: 40px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar i{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+/* sfondi */
+
+.green {
+    background-color: green;
+}
+
+.acqua {
+    background-color: aqua;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+

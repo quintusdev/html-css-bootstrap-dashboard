@@ -13,75 +13,87 @@
 }
 
 .header {
+    width: 100%;
     height: 70px;
+    position: fixed;
+    z-index: 100;
 }
 
-.w-250{
-    width: 250px;
+.pt70 {
+    padding-top: 70px;
 }
 
-.h-100 {
-    height: 100vh;
+.ul-sidebar{
+    list-style-type: none;
+    color: #fff;
+    padding: 0;
 }
 
-.vuoto {
-    height: 300px;
-    background-color: cadetblue;
+.col-200{
+    width: 170px;
 }
 
-.main {
-    flex-grow: 1;
-    display: flex;
-    overflow-y: hidden;
-}
-
-/* sidebar */
-.sidebar {
+.width-row{
     background-image: url(../img/sidebar-bg.png);
-    background-color: #051E34;
-    width: 100px;
+    background-color: #051e34;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 170px;
+    height: 100%;
+    position: fixed;
 }
 
-.dashboard {
-    background-color: white;
-    flex-grow: 1;
-    overflow-y: auto;
+/* style search bar */
+.back-input{
+    background-color: lightgray;
 }
 
-.mobile-logo {
-    width: 37px;
-    aspect-ratio: 1;
+.has-search .form-control {
+    padding-left: 2.375rem;
 }
 
-.sidebar .list-group {
-    border-radius: 0;
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #212529;
 }
 
-.sidebar .list-group-item {
-    background-color: transparent;
-    border-color: transparent;
-    color: white;
+.bginput {
+    background-color: lightgray;
 }
+
+#padding-bottom-sidebar {
+    padding-bottom: 100px;
+}
+
+
+.col-80{
+    width: calc(100% - 170px);
+    background-color: #fff;
+}
+
 
 .sidebar .list-group-item.active {
     background-color: rgba(255, 255, 255, .25);
 }
 
-.sidebar__icon {
-    font-size: 1rem;
-    width: 35px;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* fine dashboard */
 /* recap */
 
 .recap {
     background-color: #1B72E8;
     color: white;
+}
+
+.mobile-logo {
+    width: 37px;
+    aspect-ratio: 1;
 }
 
 .recap .badge {
@@ -101,12 +113,12 @@
 .dashboard .card-header {
     font-weight: 700;
     font-size: 1.5rem;
-}
+} 
 
 /* MEDIA QUERY */
 
 /* MOBILE */
-    @media (min-width: 576px) {
+    @media screen and (min-width: 576px) {
 
 
     }
@@ -120,12 +132,6 @@
 /* DESKTOP */
     @media (min-width: 992px) {
 
-        .sidebar { 
-            width: 250px;
-        }
+    
 
-        .dashboard .offcanvas {
-            width: calc(100% - 250px);
-        }
-
-    }
+    } 

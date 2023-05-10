@@ -14,89 +14,422 @@
         <!-- LINK STYLE CSS -->
         <link rel="stylesheet" href="./css/style.css">
         
-        <title>Document</title>
+        <title>Bootstrap Dashboard</title>
     </head>
 
     <body>
         <!-- INIZIO HEADER -->
-        <header>
-            <div class="container-fluid hd">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="navbar bg-body-tertiary">
-                            <div class="container-fluid">
-                                <div class="col-1">
-                                    <a class="navbar-brand"><img src="./img/logo.svg" alt="logo Boolean"></a>
-                                </div>
-                                <div class="col-10">
-                                    <div class="search-bar">
-                                        <i class="fa-solid fa-magnifying-glass"></i> 
-                                        <input class="form-control me-2 pleft" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-                                    </div>
-                                </div>
-                                <div class="col-1 d-flex">
-                                    <ul class="list-inline m-0 text-center d-flex flex-fill justify-content-between">
-                                        <li class="list-inline-item p-2"><i class="fa-solid fa-list"></i></li>
-                                        <li class="list-inline-item p-2"><i class="fa-solid fa-circle-question"></i></li>
-                                        <li class="list-inline-item p-2"><i class="fa-solid fa-ellipsis-vertical"></i></li>
-                                        <li class="list-inline-item p-2"><i class="fa-solid fa-bell text-warning"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
+        <header class="header">
+            <nav class="navbar navbar-expand-md w-100 h-100 bg-white" data-bs-theme="light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-6" href="#">
+                        <img src="./img/logo.svg" alt="logo-md" class="d-none d-lg-block">
+                        <img src="./img/mobile-logo.png" alt="logo-sm" class="mobile-logo d-lg-none">
+                    </a>
+                    <form class="d-flex flex-grow-1" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-grow-0">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-warning" href="#" role="button" aria-expanded="false">
+                                    <i class="fa-solid fa-bell"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </header>
         <!-- FINE HEADER -->
-
+    
         <!-- INIZIO MAIN -->
-        <main>
-        <div class="container-fluid height-contain">
-            <div class="row">
-                <div class="col-2 contenitore-sx">
-                    <div class="container-fluid">
-                        <div class="row height justify-content-between flex-column">
-                            <div class="col-12 green">
+        <main class="main">
+            <section class="sidebar w-250">
+                <div class="container-fluid py-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="list-group justify-content-center" id="list-tab" role="tablist">
+                                <a class="list-group-item list-group-item-action active d-flex align-items-center justify-content-center justify-content-lg-start" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">
+                                    <span class="d-block me-lg-2 sidebar__icon">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span>
+                                    <span class="d-none d-lg-block"> Home </span>
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-lg-start" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">
+                                    <span class="d-block me-lg-2 sidebar__icon">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </span>
+                                    <span class="d-none d-lg-block"> Stats </span>
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-lg-start" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">
+                                    <span class="d-block me-lg-2 sidebar__icon">
+                                        <i class="fa-solid fa-signal"></i>
+                                    </span>
+                                    <span class="d-none d-lg-block"> Signal </span>
+                                </a>
+                            </div>
 
-                            </div>
-                            <div class="col-12 yellow"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 offset-2">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 purple">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="row ">
-                            <div class="col-12 col-md-8 grey">
-                                <div class="container-fluid">
-                                    <div class="row flex-column">
-                                        <div class="col-12 acqua"></div>
-                                        <div class="col-12 lightgrey"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4 pink">
-                                <div class="container-fluid">
-                                    <div class="row flex-column">
-                                        <div class="col-12 lightgrey"></div>
-                                        <div class="col-12 acqua"></div>
-                                    </div>
-                                </div>
+                            <!-- DA SISTEMARE PORTARE IN FONDO ALLA NAVBAR -->
+                            <div class="list-group justify-content-center" id="list-tab2" role="tablist">
+                            <a class="list-group-item list-group-item-action d-flex align-items-center justify-content-center justify-content-lg-start" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">
+                                <span class="d-block me-lg-2 sidebar__icon">
+                                    <i class="fa-solid fa-gear me-lg-2 sidebar__icon"></i>
+                                </span>
+                                <span class="d-none d-lg-block"> Admin </span>
+                            </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
-    <!-- INIZIO MAIN -->
+            </section>
 
+            <!-- SEZIONE DASHBOARD -->
+            <section class="dashboard">
+                <div class="container-fluid recap py-3">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col py-2 py-lg-0 col-lg-5">
+                            <h6>
+                                <span class="recap__title fs-1"> Boolean </span> 
+                                <span class="badge rounded-pill"> Piano blaze </span>
+                            </h6>
+                            <h6>
+                                <span class="badge rounded-pill"> 3 app </span>
+                                <i class="fa-solid fa-angles-right"></i>
+                                <span class="badge rounded-pill d-inline-block d-lg-none"> + </span>
+                                <span class="badge rounded-pill d-none d-lg-inline-block"> Boolean mobile app </span>
+                                <span class="badge rounded-pill d-none d-lg-inline-block"> Boolean web app </span>
+                                <span class="badge rounded-pill d-none d-lg-inline-block"> Boolean blog app </span>
+                            </h6>
+                        </div>
+                        <div class="col py-2 py-lg-0 col-lg-4">
+                            <h6>Studenti online </h6>
+                            <h6 class="fs-1"> 125 </h6>
+                        </div>
+                        <div class="col py-2 py-lg-0 col-lg-3 order-first order-md-last">
+                            <span class="me-3"> Nuovo studente </span>
+                            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">+</button>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                                        Inserisci un nuovo studente
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <!-- <div class="vuoto">
+                                    OFFCANVAS FORM
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FINE DASHBOARD -->
+        
+                <!-- INIZIO CONTENUTO LEZIONI -->
+                <div class="container-fluid details py-3">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="card mb-3">
+                                <div class="card-header"> Prossime classi </div>
+                                <div class="card-body">
+                                <table class="table text-center align-middle">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col" class="text-start">Nome</th>
+                                        <th scope="col" class="d-none d-md-table-cell">Data inizio</th>
+                                        <th scope="col" class="d-none d-md-table-cell">ROI</th>
+                                        <th scope="col">Stato</th>
+                                        <th scope="col">Azioni</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- RIGA 1 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #75 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 15 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-success"> Done </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 2 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #76 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 16 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-success"> Done </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 3 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #77 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 17 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-warning"> process </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 4 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #78 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 18 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-success"> Done </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 5 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #79 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 19 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-danger"> failed </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 6 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #80 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-success"> Done </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 7 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #81 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 21 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-danger"> failed </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <!-- RIGA 8 -->
+                                        <tr>
+                                            <th scope="row">
+                                                <span class="d-flex justify-content-start align-items-center">
+                                                    <div class="class__img me-2">
+                                                        <img src="./img/class-avatar.jpg" alt="class-avatar">
+                                                    </div>
+                                                    <div class="class__name"> Classe #82 </div>
+                                                </span>
+                                            </th>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 22 Feb 2021 </span>
+                                            </td>
+                                            <td class="d-none d-md-table-cell">
+                                                <span class="d-inline-block align-middle"> 20% </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block align-middle badge bg-success"> Done </span>
+                                            </td>
+                                            <td>
+                                                <span class="d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-pencil"></i>
+                                                    </button>
+                                                    <button type="button" class="btn btn-light">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INIZIO CARD -->
+                <div class="card mb-3 vuoto">
+                    <!-- FAQ CARD CONTENT-->
+                </div>
+                <div class="card-body vuoto">
+                        <!-- ACCORDION CONTENT-->
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="card mb-3 vuoto">
+                        <!-- TO DO CONTENT -->
+                    </div>
+                    <div class="card vuoto">
+                        <!-- STATISTICHE UTENTI ATTIVI -->
+                    </div>
+                </div>
+                <!-- FINE CARD -->
+            </section>
+        </main>
+
+        <!-- SCRIPT JAVA -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>

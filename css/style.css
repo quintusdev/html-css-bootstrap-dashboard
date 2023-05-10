@@ -1,71 +1,85 @@
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-header .container-fluid {
-    height: 50px;
+.hd{
+    height: 70px;
+    position: fixed;
+    z-index: 100;
 }
 
-.container-sidebar {
+.height-contain{
+    padding-top: 70px;
+}
+
+
+.contenitore-sx{
+    background-color: blue;
+    height: calc(100vh - 70px);
+    position: fixed;
+}
+
+.height{
+    height: 100vh;
+}
+
+
+.green{
     background-color: green;
-    height: calc(100vh - 50px);
+    height: 200px;
 }
 
-.h{
-    height: calc(100vh - 50px);
-}
-
-.row {
-    height: 700px;
-}
-
-.row2 {
+.yellow{
+    background-color: yellow;
     height: 150px;
 }
 
-.col-12 {
-    height: 100px;
+
+.grey{
+    background-color: grey;
+    height: calc(100vh - 70px);
+}
+
+.pink{
+    background-color: pink;
+    height: calc(100vh - 70px);
+}
+
+.purple{
+    background-color: purple;
+    height: 80px;
+}
+
+.acqua, .lightgrey{
+    border: 1px solid black;
+}
+
+.acqua{
+    background-color: aqua;
+    height: 300px;
+}
+
+.lightgrey{
+    background-color: lightgray;
+    height: 200px;
 }
 
 .pleft {
     padding-left: 40px;
 }
 
-.search-bar {
-    position: relative;
-}
+/* STYLE HEADER */
 
-.search-bar i{
-    position: absolute;
-    top: 15px;
-    left: 10px;
-}
+    .search-bar {
+        position: relative;
+    }
 
-/* sfondi */
+    .search-bar i{
+        position: absolute;
+        top: 15px;
+        left: 10px;
+    }
 
-.green {
-    background-color: green;
-}
-
-.acqua {
-    background-color: aqua;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.purple {
-    background-color: purple;
-}
-
-.lightblue {
-    background-color: lightblue;
-}
-
+/* STYLE HEADER */

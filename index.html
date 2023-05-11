@@ -18,61 +18,49 @@
     </head>
 
     <body>
-        <!-- INIZIO HEADER -->
-        <header class="header">
-            <nav class="navbar navbar-expand-md w-100 h-100 bg-white" data-bs-theme="light">
-                <div class="container-fluid">
-                    <a class="navbar-brand fs-6" href="#">
-                        <img src="./img/logo.svg" alt="logo-md" class="d-none d-lg-block">
-                        <img src="./img/mobile-logo.png" alt="logo-sm" class="mobile-logo d-lg-none">
-                    </a>
-                    <div class="form-group has-search w-100">
-                        <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control back-input" placeholder="Prova a cercare: Lezioni di Laravel">
+        <header>
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center red">
+                    <div class="col-1">
+                        <img class="dim-logo d-none d-lg-inline" src="./img/logo.svg" alt="logo">
+                        <img class="dim-logo-small d-lg-none" src="./img/mobile-logo.png" alt="mobile-logo">
                     </div>
-                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">
-                                    <i class="fa-solid fa-list-ul"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-solid fa-circle-question"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="col-10">
+                        <div class="content">
+                            <div class="form-group has-search">
+                                <span class="fa fa-search form-control-feedback"></span>
+                                <input type="text" class="form-control back-input" placeholder="Prova a cercare: Lezioni di Laravel">
+                              </div>
+                        </div>
                     </div>
-                    <div class="flex-grow-0">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-bell"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end position-absolute">
-                                    <li><a class="dropdown-item" href="#">Profilo</a></li>
-                                    <li><a class="dropdown-item" href="#">Fatturazione</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div class="col-1 p-lg-0 d-flex align-items-center gap-2 ">
+                        <i class="fa-solid fa-list d-none d-lg-inline"></i>
+                        <i class="fa-solid fa-circle-question d-none d-lg-inline"></i>
+                        <i class="fa-solid fa-ellipsis-vertical d-none d-lg-inline"></i>
+                        <div class="flex-grow-0">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link active text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-bell"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end position-absolute">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </header>
         <!-- FINE HEADER -->
-    
         <!-- MAIN -->
         <main>
             <div class="container-fluid">
-                <div class="row pt70">
+                <div class="row pt-4">
                     <!-- INIZIO SIDEBAR -->
                     <div class="col-200">
                         <div class="row width-row justify-content-between flex-column">
@@ -92,11 +80,11 @@
                     </div>
                     <!-- FINE SIDEBAR -->
                     <div class="col-80 p-0">
-                        <div class="container-fluid recap py-3">
+                        <div class="container-fluid recap">
                             <div class="row row-cols-1 row-cols-md-3"> 
-                                <div class="col py-2 py-lg-0 col-lg-5">
+                                <div class="col py-2 pb-0 py-lg-3 col-lg-6">
                                     <h6>
-                                        <span class="recap__title fs-1"> Boolean </span> 
+                                        <span class="recap_title">Boolean</span> 
                                         <span class="badge rounded-pill"> Piano blaze </span>
                                     </h6>
                                     <h6>
@@ -108,107 +96,19 @@
                                         <span class="badge rounded-pill d-none d-lg-inline-block"> Boolean blog app </span>
                                     </h6>
                                 </div>
-                                <div class="col py-2 py-lg-0 col-lg-4">
+                                <div class="col py-4 pb-0 col-lg-3">
                                     <h6>Studenti online negli ultimi 30 giorni</h6>
-                                    <h6 class="fs-1"> 125 </h6>
+                                    <h6 class="number-student py-1"> 125 </h6>
                                 </div>
-                                <div class="col py-2 py-lg-0 col-lg-3 order-first order-md-last">
+                                <div class="col py-3 pb-0 col-lg-3 order-first order-md-last">
                                     <span class="me-3"> Nuovo studente </span>
                                     <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">+</button>
-                                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                                        <div class="offcanvas-header">
-                                            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                                                Inserisci un nuovo studente
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                        </div>
-                                        <div class="offcanvas-body">
-                                        <!-- FORM NUOVO STUDENTE -->
-                                        <form class="row g-3">
-                                            <div class="col-6">
-                                                <label for="first-name" class="form-label">Nome</label>
-                                                <input type="text" class="form-control" aria-label="First name" id="first-name" required>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="last-name" class="form-label">Cognome</label>
-                                                <input type="text" class="form-control" aria-label="Last name" id="last-name" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="validationCustomUsername" class="form-label">Email</label>
-                                                <div class="input-group has-validation">
-                                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                                                    <div class="invalid-feedback">
-                                                        Please choose a correct mail.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">Password</label>
-                                                <input type="password" class="form-control inputPassword4" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="validationCustomUsername" class="form-label">Conferma email</label>
-                                                <div class="input-group has-validation">
-                                                    <span class="input-group-text inputGroupPrepend">@</span>
-                                                    <input type="text" class="form-control validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                                                    <div class="invalid-feedback">
-                                                        Please choose a correct mail.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputPassword4" class="form-label">Conferma password</label>
-                                                <input type="password" class="form-control inputPassword4" required>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="inputAddress" class="form-label">Indirizzo</label>
-                                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="inputCity" class="form-label">Città</label>
-                                                <select class="form-select" id="inputCity">
-                                                    <option selected>Milano</option>
-                                                    <option>-</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="inputState" class="form-label">Stato</label>
-                                                <select id="inputState" class="form-select">
-                                                    <option selected>Italia</option>
-                                                    <option>-</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <label for="inputZip" class="form-label">CAP</label>
-                                                <input type="number" maxlength="5" class="form-control" id="inputZip">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="formFile" class="form-label">Foto</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                            </div>
-                                            <div class="col-12">
-                                            <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                    <label class="form-check-label" for="gridCheck">
-                                                        Seleziona per proseguire
-                                                    </label>
-                                            </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" class="btn btn-primary">Salva</button>
-                                                <button type="submit" class="btn btn-warning">Svuota</button>
-                                            </div>
-                                        </form>
-                                        <!-- FINE FORM NUOVO STUDENTE -->
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="container-fluid">
                             <div class="row d-flex">
-                                <div class="col-9">
+                                <div class="col-12 col-lg-8">
                                     <div class="container-fluid details py-3">
                                         <div class="row flex-column">
                                             <div class="col-12">
@@ -231,10 +131,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #75 </div>
+                                                                        <div class="class_name"> Classe #75 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -261,10 +161,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #76 </div>
+                                                                        <div class="class_name"> Classe #76 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -291,10 +191,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #77 </div>
+                                                                        <div class="class_name"> Classe #77 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -321,10 +221,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #78 </div>
+                                                                        <div class="class_name"> Classe #78 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -351,10 +251,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #79 </div>
+                                                                        <div class="class_name"> Classe #79 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -381,10 +281,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #80 </div>
+                                                                        <div class="class_name"> Classe #80 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -411,10 +311,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #81 </div>
+                                                                        <div class="class_name"> Classe #81 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -441,10 +341,10 @@
                                                             <tr>
                                                                 <th scope="row">
                                                                     <span class="d-flex justify-content-start align-items-center">
-                                                                        <div class="class__img me-2">
+                                                                        <div class="class_img me-2">
                                                                             <img src="./img/class-avatar.jpg" alt="class-avatar">
                                                                         </div>
-                                                                        <div class="class__name"> Classe #82 </div>
+                                                                        <div class="class_name"> Classe #82 </div>
                                                                     </span>
                                                                 </th>
                                                                 <td class="d-none d-md-table-cell">
@@ -487,7 +387,7 @@
                                                             </button>
                                                           </h2>
                                                           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                                                                <div class="accordion-body">"Clicca sul + in alto nella sezione blu."</div>
                                                           </div>
                                                         </div>
                                                         <div class="accordion-item">
@@ -497,7 +397,7 @@
                                                             </button>
                                                           </h2>
                                                           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                                                                <div class="accordion-body">"Clicca sull' icona della campanella."</div>
                                                           </div>
                                                         </div>
                                                         <div class="accordion-item">
@@ -507,7 +407,7 @@
                                                             </button>
                                                           </h2>
                                                           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                                                <div class="accordion-body">"Si, la dashboard e' stata pensata anche per dispotivi mobili."</div>
                                                           </div>
                                                         </div>
                                                     </div>
@@ -516,9 +416,10 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-3">
-                                    <div class="container-fluid">
+                                </div>
+                                <!-- SECONDA COLONNA DASHBOARD -->
+                                <div class="col-12 col-lg-4">
+                                    <div class="container-fluid py-4">
                                         <div class="row flex-column">
                                             <div class="col-12">
                                                 <div class="card mb-3 mt-3">
@@ -531,7 +432,7 @@
                                                                 </li>
                                                                 <li class="list-group-item">
                                                                     <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                                                                    <label class="form-check-label" for="secondCheckbox">Lezioni di Bootstrap 5 in Classe #86</label>
+                                                                    <label class="form-check-label" for="secondCheckbox">Lezioni di Bootstrap 5 in Classe #75</label>
                                                                 </li>
                                                                 <li class="list-group-item">
                                                                     <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
@@ -544,19 +445,120 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="card"> 
-                                                    <!-- STATISTICHE UTENTI ATTIVI -->
+                                                    <img src="./img/stats.jpeg" class="card-img-top" alt="statistiche">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Utenti attivi</h5>
+                                                        <p class="card-text"> Lista degli utenti attivi </p>
+                                                    </div>
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">Gennaio: 1200</li>
+                                                        <li class="list-group-item">Febbraio: 800</li>
+                                                        <li class="list-group-item">Marzo: 1500</li>
+                                                    </ul>
+                                                    <div class="card-body">
+                                                        <a href="#" class="card-link"> Visualizza report approfondito </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>    
                         </div>       
                     </div>
                 </div>
-            </div>
         </main>
+        <!-- OFFCANVAS -->
+        <div class="offcanvas offcanvas-end canvas-w" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                    Inserisci un nuovo studente
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+            <form class="row g-3">
+                <div class="col-6">
+                    <label for="first-name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" aria-label="First name" id="first-name" required>
+                </div>
+                <div class="col-6">
+                    <label for="last-name" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" aria-label="Last name" id="last-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a correct mail.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control inputPassword4" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustomUsername" class="form-label">Conferma email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text inputGroupPrepend">@</span>
+                        <input type="text" class="form-control validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a correct mail.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Conferma password</label>
+                    <input type="password" class="form-control inputPassword4" required>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Indirizzo</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Città</label>
+                    <select class="form-select" id="inputCity">
+                        <option selected>Milano</option>
+                        <option>-</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">Stato</label>
+                    <select id="inputState" class="form-select">
+                        <option selected>Italia</option>
+                        <option>-</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">CAP</label>
+                    <input type="number" maxlength="5" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                    <label for="formFile" class="form-label">Foto</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="col-12">
+                <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Seleziona per proseguire
+                        </label>
+                </div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Salva</button>
+                    <button type="submit" class="btn btn-warning">Svuota</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <!-- FINE OFFCANVAS -->
+
         <!-- SCRIPT JAVA -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
     </body>
 </html>
